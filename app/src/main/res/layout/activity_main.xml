@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="406dp"
+        android:layout_height="71dp"
+        android:background="@color/design_default_color_on_primary"
+        android:text="@string/button_label_toast"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="showToast"/>
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="411dp"
+        android:layout_height="71dp"
+        android:background="@color/white"
+        android:text="@string/button_label_count"
+        android:textColor="@color/design_default_color_on_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="countUp"/>
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFEB3B"
+        android:gravity="center"
+        android:text="@string/count_initial_value"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="160sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_toast"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
